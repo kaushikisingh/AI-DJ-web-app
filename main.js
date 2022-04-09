@@ -29,6 +29,36 @@ function modelLoaded()
 function draw()
 {
     image(video,0,0,600,500);
+
+    fill("blue");
+    stroke("yellow");
+    circle(rightWristx,rightWristy,20);
+   if(rightWristy>0 && rightWristy <=100)
+   {
+       document.getElementById("speed").innerHTML="speed=0.5x";
+       song.rate(0.5);
+   }
+   else if(rightWristy>100 && rightWristy<=200)
+   {
+       document.getElementById("speed").innerHTML="speed=1x";
+       song.rate(1);
+   }
+   else if (rightWristy>200 && rightWristy<=300)
+   {
+       document.getElementById("speed").innerHTML="speed=1.5x";
+       song.rate(1.5);
+   }
+   else if (rightWristy>300 && rightWristy<=400)
+   {
+       document.getElementById("speed").innerHTML="speed=2x";
+       song.rate(2);
+   }
+   else if (rightWristy>400 && rightWristy<=500)
+   {
+       document.getElementById("speed").innerHTML="speed=2.5x";
+       song.rate(2.5);
+   }
+
     fill("green");
     stroke("red");
     circle(leftWristx,leftWristy,20);
